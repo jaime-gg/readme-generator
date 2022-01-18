@@ -97,14 +97,14 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app --------------------------------------------------------
 function init() {
     // use the questions array in the inquerer function
-    inquirer.prompt(question)
+    inquirer.prompt(questions)
         .then((data) => {
             // push data from answers to the included generate page
             return generateMarkdown(data)
         })
         .then((data) => {
             // push file name and data to the writeToFile function
-            writeToFile(README.md, data)
+            writeToFile('README.md', data)
         })
         // error handeling from the promise in writeToFile
         .catch(err => {
