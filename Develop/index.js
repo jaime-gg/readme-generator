@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input -------------------------------------------------
+// TODO: Create an array of questions for user input ------------------------------------------------
 const questions = [
     // #TITLE
     {
@@ -72,17 +72,39 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file ------------------------------------------------------
+// TODO: Create a function to write README file -----------------------------------------------------
 function writeToFile(fileName, data) {
-
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./Develop/generated-readme', fileContent, err => {
+         
+          if (err) {
+            reject(err);
+            // return out of the function here to not execute the resolve() function as well
+            return;
+          }
+    
+          // if everything went well
+          resolve({
+            ok: true,
+            message: 'README file created!'
+          });
+        });
+      });
 }
 
 
-// TODO: Create a function to initialize app ---------------------------------------------------------
+// TODO: Create a function to initialize app --------------------------------------------------------
 function init() {
-
+    // use the questions array in the inquerer function
+    inquirer.prompt(question)
+        .then((data) => {
+            return generateMarkdown(data)
+        })
+        .then((data) => {
+            
+        })
 }
 
 
-// Function call to initialize app -------------------------------------------------------------------
+// Function call to initialize app ------------------------------------------------------------------
 init();
