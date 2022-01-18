@@ -53,7 +53,7 @@ const questions = [
         type: 'list',
         message: 'Under what license is this project? ',
         name: 'license',
-        choices: [],
+        choices: ['MIT', 'GPLv2', 'Apache', 'GPLv3', 'BSD 3-clause', 'Unlicense', 'BSD 2-clause'],
     },
 
     // ##QUESTIONS | GITHUB
