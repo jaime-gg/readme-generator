@@ -33,10 +33,10 @@ const questions = [
         name: 'usage',
     },
 
-    // ##CONTRIBUTIONS
+    // ## CONTRIBUTION GUIDELINES
     {
         type: 'input',
-        message: 'Who/What contrubuted to the developement of this project? ',
+        message: 'What sort of contribution guidlines do you wish to include? ',
         name: 'contribution',
     },
 
