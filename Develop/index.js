@@ -73,9 +73,10 @@ const questions = [
 
 
 // TODO: Create a function to write README file -----------------------------------------------------
+// fileName is replaced with README.md, which is pushed in the init function
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./Develop/generated-readme', fileContent, err => {
+        fs.writeFile('./Develop/generated-readme', fileName, data, err => {
          
           if (err) {
             reject(err);
@@ -98,11 +99,17 @@ function init() {
     // use the questions array in the inquerer function
     inquirer.prompt(question)
         .then((data) => {
+            // push data from answers to the included generate page
             return generateMarkdown(data)
         })
         .then((data) => {
-            
+            // push file name and data to the writeToFile function
+            writeToFile(README.md, data)
         })
+        // error handeling from the promise in writeToFile
+        .catch(err => {
+            console.log(err);
+        });
 }
 
 
