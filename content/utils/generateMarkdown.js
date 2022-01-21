@@ -41,7 +41,7 @@ function generateMarkdown(data) {
   // add the link function in the table of contents
   // add the section function in the page
   return `# ${data.title} 
-  ![License](${renderLicenseBadge(data.license)})
+  ![theLicenseBadeg](${renderLicenseBadge(data.license)})
 
   ## Description 
   ${data.description}
@@ -50,7 +50,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * ${renderLicenseLink(data.license)}
-  * [Contribution Guidelines](#Contributing)
+  * [Contribution Guidelines](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
   
