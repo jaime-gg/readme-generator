@@ -1,6 +1,8 @@
 # 09 Node.js: Professional README Generator
 I was assigned the development of a node application that utilizes INQUIRER to prompt users into developing a professional README file. This was made possible by the provided User Story, Acceptance Criteria, and the given starter code. 
+
 It was by following the instructions given withen the code in the form of 'TODO:' prompts, that I developed an array of questions that are given to the user on their command line; this was done with the use of the INQUERIER module. In addition, I then generated a new page by using the GENERATEMARKDOWN.js in conjunction with the node file system (fs) module. 
+
 It was through these steps that I was able to successfully create a professional REAME generator. 
  
 ## Given: User Story
@@ -35,6 +37,8 @@ THEN I am taken to the corresponding section of the README
 To use this application, each user must clone the repo into their local machine. Once done, within the command line navigate to the contents folder, and it is there that you will need to insert the 'npm install' command which will download all dependencies. Additionally, it is in the content folder that you will initialize the node application and generate the README by answering all of the prompted questions. 
  
 [A walkthrough video for the application](https://drive.google.com/file/d/1VJBWkZ-THRlaXMbkr3-T-XZ1lqfuFN72/view?usp=sharing)
+
+(If this link is broken, then be assured that a copy of the video is included in the assets folder.)
  
 ## Review
  
